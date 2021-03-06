@@ -1,6 +1,5 @@
 <h3>Мои проекты:</h3>
-<ul>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://stackblitz.com/github/HunteRPVP/angular-lesson-table">Журнал</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://stackblitz.com/github/HunteRPVP/angular-hw78" >Журнал через формы</a></li>
-    <li><a target="_blank" rel="noopener noreferrer" href="https://stackblitz.com/github/HunteRPVP/angular-lecture1-task1/tree/main">Hello, World!</a></li>
+<ul *ngFor="let project of projArr">
+    <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/HunteRPVP/{{ project }}/blob/main/README.md">Git README {{ project }}</a></li>
+    <li><a target="_blank" rel="noopener noreferrer" href="https://stackblitz.com/github/HunteRPVP/{{ project }}" >SB {{ project }}</a></li>
 </ul>
