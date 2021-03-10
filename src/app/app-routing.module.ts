@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ReclitComponent } from './reclit/reclit.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,12 @@ const routes: Routes = [
     path: 'projects',
     component: ProjectsComponent,
     loadChildren: './projects/projects.module#ProjectsModule',
+    pathMatch: 'full',
+  },
+  {
+    path: 'reclit',
+    component: ReclitComponent,
+    loadChildren: './reclit/reclit.module#ReclitModule',
     pathMatch: 'full',
   }
 ];

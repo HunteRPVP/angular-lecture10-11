@@ -21,3 +21,13 @@ ul {
   li a:hover {
     background-color: #111111;
   }
+
+  mat-icon {
+    padding: 13px;
+    color: white;
+    cursor: pointer;
+  }
+
+  mat-icon:hover {
+    background-color: #111111;
+  }

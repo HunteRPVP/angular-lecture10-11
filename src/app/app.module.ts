@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
 import { AboutModule } from './about/about.module';
 import { ProjectsModule } from './projects/projects.module';
+import { ReclitModule } from './reclit/reclit.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,10 @@ import { ProjectsModule } from './projects/projects.module';
     AppRoutingModule,
     MainModule,
     AboutModule,
-    ProjectsModule
+    ProjectsModule,
+    ReclitModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
