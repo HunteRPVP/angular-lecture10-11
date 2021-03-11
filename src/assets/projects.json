@@ -1,30 +1,173 @@
 {
-    "projects": [
-        "angular-lecture1-task1",
-        "for-readme",
-        "for-lodash",
-        "RGB_rainbow",
-        "angular-task10",
-        "angular-task11",
-        "angular-task12",
-        "angular-fibonacci",
-        "angular-lesson3",
-        "angular-lecture4",
-        "AM_task5",
-        "angular-hw4-2-1",
-        "angular-hw4-t3",
-        "angular-hw4-t4",
-        "angular-lecture5",
-        "angular-lecture6",
-        "angular-hw4-t2-p2",
-        "angular-lecture8",
-        "angular-lecture7",
-        "angular-lesson-table",
-        "angular-lecture9",
-        "angular-lecture10",
-        "angular-hw78",
-        "angular-lecture12",
-        "angular-lecture10-11",
-        "angular-hw11"
+    "lessons": [
+    	{
+    		"lessonName": "Вводное занятие. Описание общих процессов обучения на курсе.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture1-task1"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Трелло. Создание индивидуального проекта. GitHub. ReadMe. Создание репозитория на GitHub. Базовые команды Git. Npm. package.json. Введение в Angular. Angular CLI. Создание проекта на Angular. Построение проекта. https://stackblitz.com/",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Изучение файла ReadMe",
+    				"projectName": "for-readme"
+    			},
+    			{
+    				"subtaskName": "Добавление в проект пакета Lodash",
+    				"projectName": "for-lodash"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Создание компонентов. Модули. Загрузка приложения. Стили и шаблоны компонента. Привязка данных. Работа с компонентами. Взаимодействие между компонентами. Привязка к событиям дочернего компонента. Взаимодействие между модулями",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Радуга",
+    				"projectName": "RGB_rainbow"
+    			},
+    			{
+    				"subtaskName": "Список из компонентов",
+    				"projectName": "angular-task10"
+    			},
+    			{
+    				"subtaskName": "Изучение декоратора @Component()",
+    				"projectName": "angular-task11"
+    			},
+    			{
+    				"subtaskName": "Шахматная доска",
+    				"projectName": "angular-task12"
+    			},
+    			{
+    				"subtaskName": "Ряд Фибоначчи из компонентов",
+    				"projectName": "angular-fibonacci"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Жизненный цикл компонента. Шаблонные переменные, ViewChild, ContentChild",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lesson3"
+    			},
+    			{
+    				"subtaskName": "Изучение Angular Material",
+    				"projectName": "AM_task5"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Директивы. Атрибутивные директивы ngClass и ngStyle. Создание атрибутивных директив. ElementRef. Renderer2. HostListener и HostBinding. Получение параметров в директивах.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture5"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Структурные директивы ngIf, ngFor, ngSwitch. Символ звездочки и синтаксический сахар. Создание структурных директив. TemplateRef<any>. ViewContainerRef.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture6"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Сервисы и dependency injection. Внедрение сервиса в другой сервис. Опциональные сервисы. Один сервис для всех компонентов. Иерархия сервисов.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture9"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Работа с формами. Модуль FormsModule и директива NgModel. Получение и изменение модели. Состояние модели и валидация. Директива NgForm.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture7"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Reactive Forms. Валидация.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture7"
+    			},
+    			{
+    				"subtaskName": "Таблица уроков и журнал оценок с помощью форм",
+    				"projectName": "angular-hw78"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "HttpClient и отправка запросов. Объект Observable и библиотека RxJS. Обработка ошибок. Отправка данных в запросе. Interceptors. Пути использования.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture9"
+    			},
+    			{
+    				"subtaskName": "Изучение HttpClient и Interceptor",
+    				"projectName": "angular-hw11"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Маршрутизация. Определение маршрутов. Создание ссылок. Параметры маршрута. Параметры строки запроса. Программная навигация. Дочерние маршруты. Guards.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture10"
+    			},
+    			{
+    				"subtaskName": "Сайт-визитка",
+    				"projectName": "angular-lecture10-11"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Pipes . Работа с pipes. Создание своих pipes. Pure и Impure Pipes. AsyncPipe.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture4"
+    			},
+    			{
+    				"subtaskName": "Пример использования Pipe",
+    				"projectName": "angular-hw4-2-1"
+    			},
+    			{
+    				"subtaskName": "Использование Pipe для фильтрации",
+    				"projectName": "angular-hw4-t2-p2"
+    			},
+    			{
+    				"subtaskName": "Пример кастомного JoinPipe",
+    				"projectName": "angular-hw4-t3"
+    			},
+    			{
+    				"subtaskName": "Телефонная книга",
+    				"projectName": "angular-hw4-t4"
+    			}
+    		]
+    	},
+    	{
+    		"lessonName": "Тесты. Jasmine & Karma. Тесты Classes & Pipes. Тесты с Mocks & Spies. Angular Test Bed. Тесты Change Detection. Тестирование асинхронного кода. Тесты инверсии зависимостей. Тесты компонентов. Тесты директив. Тесты форм. Тесты запросов Http. Тесты маршрутов.",
+    		"subtasks": [
+    			{
+    				"subtaskName": "Задача на лекции",
+    				"projectName": "angular-lecture12"
+    			}
+    		]
+    	}
     ]
 }

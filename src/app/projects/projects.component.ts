@@ -9,13 +9,12 @@ import * as projects from '../../assets/projects.json'
 })
 export class ProjectsComponent implements OnInit {
 
-  projArr = [];
+  projArr = [{}];
 
-  constructor() {
-    projects.projects.forEach(project => {
-      this.projArr.push(project);
-    });
-  }
+  dataSource = projects.lessons;
+  displayedColumns: string[] = ['lessonName', 'subtaskName', 'git', 'sb']
+
+  constructor() {}
 
   ngOnInit(): void {
   }

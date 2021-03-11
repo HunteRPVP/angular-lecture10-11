@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from './projects.component';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [ProjectsComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MatTableModule,
+    MatIconModule
   ]
 })
 export class ProjectsModule { }
