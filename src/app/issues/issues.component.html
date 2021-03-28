@@ -1,0 +1,87 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef>Статус</th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-raised-button color="primary">{{ element.state }}</button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="created_at">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>Дата создания</th>
+    <td mat-cell *matCellDef="let element">
+      {{ element.created_at | date: "dd.MM.yy hh:mm" }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Имя</th>
+    <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th mat-header-cell *matHeaderCellDef>Описание</th>
+    <td mat-cell *matCellDef="let element">{{ element.body }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="creatorInfo">
+    <th mat-header-cell *matHeaderCellDef>Информация о создателе</th>
+    <td mat-cell *matCellDef="let element">
+      <span
+        matTooltip="https://github.com/{{ element.user.login }}"
+        (click)="openDialog(element.user)"
+        class="user"
+      >
+        {{ element.user.login }}
+      </span>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef>Действия</th>
+    <td mat-cell *matCellDef="let element">
+      <button
+        mat-icon-button
+        matTooltip="https://github.com/HunteRPVP/angular-lecture10-11/issues/{{
+          element.number
+        }}"
+        color="primary"
+        (click)="openIssue(element.number)"
+      >
+        <mat-icon>launch</mat-icon>
+      </button>
+      <button
+        matTooltip="Прокомментировать"
+        mat-icon-button
+        color="primary"
+        [routerLink]="['/comment', element.number, element.user.login]"
+        routerLinkActive="router-link-active"
+      >
+        <mat-icon>forum</mat-icon>
+      </button>
+      <button
+        *ngIf="element.state != 'closed'"
+        matTooltip="Закрыть"
+        mat-icon-button
+        color="primary"
+        class="lock"
+        (click)="isService.lockIssue(element.number)"
+      >
+        <mat-icon>clear</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<button
+  matTooltip="Заявить о баге"
+  mat-mini-fab
+  color="primary"
+  class="addIssue"
+  (click)="openAddIssue()"
+>
+  <mat-icon>add</mat-icon>
+</button>
+

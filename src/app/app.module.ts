@@ -9,6 +9,7 @@ import { ProjectsModule } from './projects/projects.module';
 import { ReclitModule } from './reclit/reclit.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { IssuesModule } from './issues/issues.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
     ProjectsModule,
     ReclitModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    IssuesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

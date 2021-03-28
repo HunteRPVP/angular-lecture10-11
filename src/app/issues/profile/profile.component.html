@@ -1,0 +1,17 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ data.user.login }}</mat-card-title>
+  </mat-card-header>
+  <img
+    mat-card-image
+    src="{{ data.user.avatar_url }}"
+    alt="{{ data.user.login }}"
+  />
+  <mat-card-content>
+    <p>
+        <a matTooltip="https://github.com/{{data.user.login}}" color="primary" href="https://github.com/{{data.user.login}}">
+          Посмотреть
+        </a>
+    </p>
+  </mat-card-content>
+</mat-card>

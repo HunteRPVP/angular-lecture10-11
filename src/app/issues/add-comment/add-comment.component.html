@@ -1,0 +1,22 @@
+<form [formGroup]="commentForm">
+  <mat-card class="example-card">
+    <label>Суть комментария </label><br />
+    <textarea type="text" formControlName="comment"></textarea>
+    <br />
+    <span *ngIf="commentForm.get('comment').getError('required')"
+      >Поле не должно быть пустым</span
+    >
+    <mat-card-content>
+      <button
+        mat-mini-fab
+        color="primary"
+        *ngIf="!commentForm.get('comment').getError('required')"
+        (click)="
+          isService.addComment(issueNumber, commentForm.get('comment').value)
+        "
+      >
+        <mat-icon>done</mat-icon>
+      </button>
+    </mat-card-content>
+  </mat-card>
+</form>

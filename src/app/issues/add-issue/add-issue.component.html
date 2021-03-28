@@ -1,0 +1,35 @@
+<form [formGroup]="issueForm">
+  <mat-card class="example-card">
+    <p>
+      <label>Заголовок </label>
+      <input type="text" formControlName="title" />
+      <span *ngIf="issueForm.get('title').invalid"
+        ><br />Поле не должно быть пустым</span
+      >
+    </p>
+    <p>
+      <label>Суть бага </label>
+      <br />
+      <textarea type="text" formControlName="body"></textarea>
+      <span *ngIf="issueForm.get('body').invalid"
+        ><br />Поле не должно быть пустым</span
+      >
+    </p>
+    <mat-card-content>
+      <button
+        mat-mini-fab
+        color="primary"
+        *ngIf="issueForm.valid"
+        (click)="
+          isService.addIssue(
+            issueForm.get('title').value,
+            issueForm.get('body').value
+          )
+        "
+        mat-dialog-close
+      >
+        <mat-icon>done</mat-icon>
+      </button>
+    </mat-card-content>
+  </mat-card>
+</form>

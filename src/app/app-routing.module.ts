@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { IssuesComponent } from './issues/issues.component';
 import { MainComponent } from './main/main.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ReclitComponent } from './reclit/reclit.component';
@@ -33,6 +34,12 @@ const routes: Routes = [
     path: 'reclit',
     component: ReclitComponent,
     loadChildren: './reclit/reclit.module#ReclitModule',
+    pathMatch: 'full',
+  },
+  {
+    path: 'issues',
+    component: IssuesComponent,
+    loadChildren: './issues/issues.module#IssuesModule',
     pathMatch: 'full',
   }
 ];
